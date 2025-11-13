@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REPORT-GEN - Enterprise Report Generation Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="app-title">REPORT-GEN</h1>
+                <p class="app-subtitle">Enterprise Report Generation Platform</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                <!-- Upload Section -->
+                <section class="section upload-section">
+                    <h2 class="section-title">Step 1: Upload Your Data</h2>
+                    <div class="upload-area" id="uploadArea">
+                        <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <h3>Drag and drop your file here</h3>
+                        <p>or click to browse</p>
+                        <input type="file" id="fileInput" accept=".csv,.xlsx,.xls" hidden>
+                    </div>
+                    <div id="fileInfo" class="file-info" style="display: none;">
+                        <p><strong>File:</strong> <span id="fileName"></span></p>
+                        <p><strong>Size:</strong> <span id="fileSize"></span></p>
+                        <p><strong>Rows:</strong> <span id="rowCount"></span> | <strong>Columns:</strong> <span id="colCount"></span></p>
+                        <button id="clearFile" class="btn-secondary">Clear File</button>
+                    </div>
+                </section>
+
+                <!-- Configuration Section -->
+                <section class="section config-section">
+                    <h2 class="section-title">Step 2: Configure Report</h2>
+                    
+                    <div class="form-group">
+                        <label for="reportTitle">Report Title</label>
+                        <input type="text" id="reportTitle" placeholder="Enter report title..." class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reportType">Report Type</label>
+                        <select id="reportType" class="form-select">
+                            <option value="">Select Report Type...</option>
+                            <option value="HR & Payroll">HR & Payroll</option>
+                            <option value="Academic & Educational">Academic & Educational</option>
+                            <option value="Finance & Accounting">Finance & Accounting</option>
+                            <option value="Sales & Marketing">Sales & Marketing</option>
+                            <option value="Operations & Logistics">Operations & Logistics</option>
+                            <option value="Healthcare & Clinical">Healthcare & Clinical</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Detected Template</label>
+                        <div id="detectedTemplate" class="template-box">
+                            <p class="placeholder">Upload a file to auto-detect template</p>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="templateSelector">Select Template</label>
+                        <select id="templateSelector" class="form-select">
+                            <option value="">Auto-selected template will appear here</option>
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Advanced Options Section -->
+                <section class="section advanced-section">
+                    <h2 class="section-title">Step 3: Advanced Options (Optional)</h2>
+                    
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" id="includeSummary" checked>
+                            Include Summary Statistics
+                        </label>
+                        <label>
+                            <input type="checkbox" id="includeTrends" checked>
+                            Include Trend Analysis
+                        </label>
+                        <label>
+                            <input type="checkbox" id="includeRecommendations" checked>
+                            Include Recommendations
+                        </label>
+                    </div>
+                </section>
+
+                <!-- Generate Button -->
+                <section class="section button-section">
+                    <button id="generateBtn" class="btn-primary" disabled>
+                        Generate Professional Report
+                    </button>
+                </section>
+
+                <!-- Preview Section -->
+                <section class="section preview-section" id="previewSection" style="display: none;">
+                    <h2 class="section-title">Report Preview</h2>
+                    <div class="preview-container">
+                        <div id="reportPreview" class="report-preview"></div>
+                    </div>
+
+                    <!-- Export Section -->
+                    <div class="export-section">
+                        <h3>Export Report</h3>
+                        <div class="export-buttons">
+                            <button id="exportPDF" class="btn-primary">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                </svg>
+                                Export as PDF
+                            </button>
+                            <button id="exportTXT" class="btn-secondary">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                </svg>
+                                Export as TXT
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 REPORT-GEN. All rights reserved. | Enterprise Report Generation Platform</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

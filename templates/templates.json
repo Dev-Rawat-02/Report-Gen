@@ -1,0 +1,205 @@
+{
+  "hr_payroll": {
+    "Employee Performance & Development Report": {
+      "required_columns": ["name", "performance_score", "review"],
+      "optional_columns": ["designation", "department", "attendance", "salary"],
+      "metrics": {
+        "performance_score": "numeric",
+        "attendance": "numeric",
+        "salary": "currency"
+      },
+      "report_sections": [
+        "Executive Summary",
+        "Performance Metrics",
+        "Top Performers",
+        "Development Areas",
+        "Recommendations"
+      ]
+    },
+    "Payroll & Compensation Analysis": {
+      "required_columns": ["employee_id", "salary", "compensation"],
+      "optional_columns": ["bonus", "allowance", "deduction", "net_pay", "department"],
+      "metrics": {
+        "salary": "currency",
+        "bonus": "currency",
+        "net_pay": "currency"
+      }
+    },
+    "Employee Attendance & Leave Report": {
+      "required_columns": ["name", "attendance_percentage"],
+      "optional_columns": ["department", "leave_type", "hours_worked", "date"],
+      "metrics": {
+        "attendance_percentage": "percentage",
+        "hours_worked": "numeric"
+      }
+    },
+    "Recruitment & Hiring Pipeline": {
+      "required_columns": ["candidate_name", "position", "application_date", "status"],
+      "optional_columns": ["interview_date", "salary_offered", "department"],
+      "metrics": {
+        "salary_offered": "currency"
+      }
+    }
+  },
+  "academic_educational": {
+    "Comprehensive Student Academic Report": {
+      "required_columns": ["student_name", "grade", "score"],
+      "optional_columns": ["attendance_percentage", "gpa", "remarks", "teacher_comments"],
+      "metrics": {
+        "score": "numeric",
+        "attendance_percentage": "percentage",
+        "gpa": "numeric"
+      }
+    },
+    "Detailed Attendance & Engagement Report": {
+      "required_columns": ["student_name", "attendance_percentage"],
+      "optional_columns": ["grade", "classes_present", "classes_total", "engagement_score"],
+      "metrics": {
+        "attendance_percentage": "percentage",
+        "engagement_score": "numeric"
+      }
+    },
+    "Fee Management & Collection Report": {
+      "required_columns": ["student_name", "total_fees", "paid_amount", "balance"],
+      "optional_columns": ["grade", "payment_status", "due_date", "last_payment_date"],
+      "metrics": {
+        "total_fees": "currency",
+        "paid_amount": "currency",
+        "balance": "currency"
+      }
+    },
+    "Student Progress & Promotion Analysis": {
+      "required_columns": ["student_name", "current_grade", "current_gpa"],
+      "optional_columns": ["previous_gpa", "improvement_percentage", "promotion_status"],
+      "metrics": {
+        "current_gpa": "numeric",
+        "improvement_percentage": "percentage"
+      }
+    }
+  },
+  "finance_accounting": {
+    "Financial Statement & Revenue Analysis": {
+      "required_columns": ["amount", "category", "transaction_type"],
+      "optional_columns": ["date", "department", "account_id"],
+      "metrics": {
+        "amount": "currency"
+      }
+    },
+    "Invoice & Payment Reconciliation Report": {
+      "required_columns": ["invoice_number", "amount", "paid_amount", "balance"],
+      "optional_columns": ["due_date", "payment_date", "status", "customer_name"],
+      "metrics": {
+        "amount": "currency",
+        "balance": "currency"
+      }
+    },
+    "Budget vs Actual Analysis": {
+      "required_columns": ["budget_item", "budgeted_amount", "actual_amount"],
+      "optional_columns": ["variance", "variance_percentage", "department"],
+      "metrics": {
+        "budgeted_amount": "currency",
+        "actual_amount": "currency",
+        "variance": "currency"
+      }
+    },
+    "Asset & Inventory Valuation Report": {
+      "required_columns": ["asset_name", "original_cost", "current_value"],
+      "optional_columns": ["category", "depreciation", "location", "acquisition_date"],
+      "metrics": {
+        "original_cost": "currency",
+        "current_value": "currency"
+      }
+    }
+  },
+  "sales_marketing": {
+    "Sales Performance & Pipeline Report": {
+      "required_columns": ["sales_rep_name", "sales_target", "actual_sales"],
+      "optional_columns": ["territory", "commission", "pipeline_value", "conversion_rate"],
+      "metrics": {
+        "sales_target": "currency",
+        "actual_sales": "currency",
+        "conversion_rate": "percentage"
+      }
+    },
+    "Customer Acquisition & Retention Analysis": {
+      "required_columns": ["customer_id", "acquisition_date", "customer_value"],
+      "optional_columns": ["churn_risk", "satisfaction_score", "last_interaction_date"],
+      "metrics": {
+        "customer_value": "currency",
+        "satisfaction_score": "numeric"
+      }
+    },
+    "Marketing Campaign Performance Report": {
+      "required_columns": ["campaign_name", "budget_spent", "conversions"],
+      "optional_columns": ["start_date", "end_date", "roi", "impressions", "clicks"],
+      "metrics": {
+        "budget_spent": "currency",
+        "roi": "percentage"
+      }
+    },
+    "Product Sales & Market Trend Report": {
+      "required_columns": ["product_name", "sales_quantity", "revenue"],
+      "optional_columns": ["category", "profit_margin", "stock_level"],
+      "metrics": {
+        "revenue": "currency",
+        "profit_margin": "percentage"
+      }
+    }
+  },
+  "operations_logistics": {
+    "Supply Chain & Procurement Report": {
+      "required_columns": ["supplier_name", "delivery_date", "quantity"],
+      "optional_columns": ["lead_time", "quality_score", "cost_per_unit", "order_date"],
+      "metrics": {
+        "cost_per_unit": "currency",
+        "quality_score": "numeric"
+      }
+    },
+    "Inventory & Stock Management Report": {
+      "required_columns": ["product_name", "current_stock", "min_stock_level"],
+      "optional_columns": ["warehouse", "max_stock_level", "stock_movement"],
+      "metrics": {
+        "current_stock": "numeric",
+        "stock_movement": "numeric"
+      }
+    },
+    "Project & Task Management Report": {
+      "required_columns": ["project_name", "task_id", "completion_percentage"],
+      "optional_columns": ["assigned_to", "start_date", "end_date", "priority"],
+      "metrics": {
+        "completion_percentage": "percentage",
+        "resource_hours": "numeric"
+      }
+    },
+    "Quality Assurance & Defect Report": {
+      "required_columns": ["batch_id", "total_units", "defective_units"],
+      "optional_columns": ["defect_rate", "root_cause", "resolution_date"],
+      "metrics": {
+        "defect_rate": "percentage"
+      }
+    }
+  },
+  "healthcare_clinical": {
+    "Patient Treatment & Clinical Outcome Report": {
+      "required_columns": ["patient_id", "treatment_date", "diagnosis", "outcome"],
+      "optional_columns": ["treatment_type", "medication", "follow_up_date"],
+      "metrics": {
+        "treatment_duration": "numeric"
+      }
+    },
+    "Hospital Operations & Bed Management Report": {
+      "required_columns": ["department", "total_beds", "occupied_beds"],
+      "optional_columns": ["average_length_stay", "occupancy_rate"],
+      "metrics": {
+        "occupancy_rate": "percentage"
+      }
+    },
+    "Medical Appointment & Patient Attendance Report": {
+      "required_columns": ["appointment_date", "attended_status"],
+      "optional_columns": ["doctor_name", "patient_name", "wait_time"],
+      "metrics": {
+        "wait_time": "numeric"
+      }
+    }
+  }
+}

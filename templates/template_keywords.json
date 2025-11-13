@@ -1,0 +1,117 @@
+{
+  "Employee Performance & Development Report": {
+    "keywords": ["performance", "score", "review", "rating", "name", "department"],
+    "minMatches": 4,
+    "confidence_threshold": 70
+  },
+  "Payroll & Compensation Analysis": {
+    "keywords": ["salary", "compensation", "bonus", "allowance", "net_pay", "deduction"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Employee Attendance & Leave Report": {
+    "keywords": ["attendance", "present", "absent", "leave", "hours_worked", "department"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Recruitment & Hiring Pipeline": {
+    "keywords": ["candidate", "position", "application", "interview", "hired", "status"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Comprehensive Student Academic Report": {
+    "keywords": ["student", "grade", "score", "gpa", "marks", "attendance", "subject"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Detailed Attendance & Engagement Report": {
+    "keywords": ["student", "attendance", "present", "absent", "engagement", "class"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Fee Management & Collection Report": {
+    "keywords": ["fee", "paid", "balance", "student", "due", "payment", "collection"],
+    "minMatches": 4,
+    "confidence_threshold": 70
+  },
+  "Student Progress & Promotion Analysis": {
+    "keywords": ["student", "grade", "gpa", "promotion", "progress", "improvement"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Financial Statement & Revenue Analysis": {
+    "keywords": ["amount", "category", "transaction", "income", "expense", "date", "revenue"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Invoice & Payment Reconciliation Report": {
+    "keywords": ["invoice", "amount", "paid", "balance", "status", "customer", "due"],
+    "minMatches": 4,
+    "confidence_threshold": 70
+  },
+  "Budget vs Actual Analysis": {
+    "keywords": ["budget", "actual", "variance", "amount", "department", "category"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Asset & Inventory Valuation Report": {
+    "keywords": ["asset", "inventory", "cost", "value", "depreciation", "location"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Sales Performance & Pipeline Report": {
+    "keywords": ["sales", "target", "commission", "revenue", "pipeline", "conversion", "rep"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Customer Acquisition & Retention Analysis": {
+    "keywords": ["customer", "acquisition", "retention", "churn", "satisfaction", "lifetime"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Marketing Campaign Performance Report": {
+    "keywords": ["campaign", "budget", "conversions", "roi", "impressions", "clicks", "marketing"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Product Sales & Market Trend Report": {
+    "keywords": ["product", "sales", "revenue", "profit", "margin", "stock", "trend"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Supply Chain & Procurement Report": {
+    "keywords": ["supplier", "order", "delivery", "lead_time", "quality", "procurement"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Inventory & Stock Management Report": {
+    "keywords": ["stock", "inventory", "quantity", "warehouse", "level", "movement"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Project & Task Management Report": {
+    "keywords": ["project", "task", "completion", "assigned", "priority", "deadline"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Quality Assurance & Defect Report": {
+    "keywords": ["batch", "defect", "quality", "units", "defective", "root_cause"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Patient Treatment & Clinical Outcome Report": {
+    "keywords": ["patient", "treatment", "diagnosis", "outcome", "doctor", "medication"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Hospital Operations & Bed Management Report": {
+    "keywords": ["department", "beds", "occupancy", "hospital", "length_stay", "admission"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  },
+  "Medical Appointment & Patient Attendance Report": {
+    "keywords": ["appointment", "patient", "attended", "doctor", "time", "schedule"],
+    "minMatches": 3,
+    "confidence_threshold": 60
+  }
+}
